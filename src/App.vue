@@ -20,6 +20,12 @@ html, body {
   padding: 0;
   overflow: hidden;
 }
+@media screen and (max-width: 768px) {
+  html, body {
+    overflow: auto;
+  }
+}
+
 
 body {
   font-family: 'Poppins', sans-serif;

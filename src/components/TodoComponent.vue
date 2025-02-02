@@ -47,13 +47,10 @@ export default {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  padding: 10px;
-  margin: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-family: 'Arial', sans-serif;
-  border-radius: 10px;
   width: 90%;
 }
 
@@ -61,11 +58,13 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 80%;
   font-size: 16px;
   color: #333;
   flex-wrap: wrap;
+  gap: 10px;
 }
+
 
 .task-item:hover {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
@@ -125,6 +124,45 @@ export default {
 
 .delete-icon:hover {
   transform: scale(1.2);
+}
+@media screen and (max-width: 768px) {
+  .task-item {
+    width: 80%;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .task-info {
+    flex-direction: line;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .description {
+ 
+    margin-right: 0;
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+
+  .date {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .buttons {
+    width: 100%;
+    justify-content: space-between;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .btn-status {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
 }
 
 

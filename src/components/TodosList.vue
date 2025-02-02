@@ -131,31 +131,25 @@ export default {
 </script>
 
 <style>
+
 .app-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
   margin-top: -40px;
- 
-}
-
-.title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin: 10px 0;
-  text-align: center;
+  padding: 20px;
 }
 
 .content {
   display: grid;
-  grid-template-columns: 300px 1fr; 
+  grid-template-columns: 300px 1fr;
   gap: 20px;
   width: 100%;
-  height: 80%;
+  max-height: 80vh;
   box-sizing: border-box;
 }
 
@@ -168,8 +162,10 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 300px; 
-  height: 100%; 
+  width: 300px;
+  height: calc(80vh - 40px);
+  max-height: calc(80vh - 40px);
+  overflow-y: auto;
 }
 
 .right-panel {
@@ -180,10 +176,28 @@ export default {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
-  width: 600px; 
-  height: 100%; 
+  width: 600px;
+
 }
+
+.task-list {
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  max-height: 100%;
+}
+
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 10px 0;
+  text-align: center;
+}
+
+
 
 
 h2 {
@@ -199,6 +213,7 @@ h2 {
   flex-direction: column;
   gap: 15px;
   width: 100%;
+
 }
 
 
@@ -345,6 +360,63 @@ h2 {
   color: #4a4a4a;
   padding-top: 15px;
   border-top: 1px solid #e9d8fd;
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 5px;
+    height: auto;
+    max-height: none;
+    align-items: center;
+    align-content: center;
+  }
+
+  .left-panel, .right-panel {
+    width: 100%;
+    height: auto;
+  }
+
+  .app-container {
+    align-items: center;
+    align-content: center;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .title {
+    font-size: 1.8rem;
+    margin-top : 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+
+
+  .filters {
+    flex-direction: line;
+    width: 100%;
+  }
+
+  .btn-filter {
+    width: 30%;
+  }
+
+  .input-field {
+    width: 85%;
+  }
+
+  .delete-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn-primary, .btn-danger {
+    width: 100%;
+    margin: 5px 0;
+  }
 }
 
 

@@ -389,7 +389,6 @@ h2 {
 
   .title {
     font-size: 1.8rem;
-    margin-top : 1.8rem;
     margin-bottom: 1rem;
   }
 

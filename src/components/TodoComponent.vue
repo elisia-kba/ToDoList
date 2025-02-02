@@ -51,46 +51,46 @@ export default {
   justify-content: space-between;
   align-items: center;
   font-family: 'Arial', sans-serif;
-  width: 90%;
+  width: 95%;
+  margin-bottom: 10px;
+  padding: 10px;
 }
 
 .task-info {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 80%;
+  width: 100%;
   font-size: 16px;
   color: #333;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-
-.task-item:hover {
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
 }
 
 .description {
   font-weight: bold;
-  flex-grow: 1;
-  margin-right: 20px;
-  max-height: 50px; 
-  overflow-y: auto; 
-  padding-right: 5px; 
-  word-wrap: break-word; 
+  flex: 1;
+  max-height: 50px;
+  overflow-y: auto;
+  padding-right: 5px;
+  word-wrap: break-word;
+}
+
+.actions-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: auto;
+  white-space: nowrap;
 }
 
 .date {
   font-size: 14px;
-  color: #777;
+  color: #333;
+  margin-right: 10px;
 }
 
 .buttons {
   display: flex;
   gap: 10px;
-  margin-left: 10px;
-  justify-content: flex-end;
-  flex-wrap: wrap;
+  align-items: center;
 }
 
 .btn-status {
@@ -125,38 +125,32 @@ export default {
 .delete-icon:hover {
   transform: scale(1.2);
 }
+
 @media screen and (max-width: 768px) {
   .task-item {
-    width: 80%;
-    flex-direction: column;
-    gap: 10px;
-    margin: 10px;
-    padding: 15px;
+    width: 85%;
+    padding: 5px;
   }
 
   .task-info {
-    flex-direction: line;
+    flex-direction: column;
     align-items: flex-start;
-    gap: 8px;
+    gap: 15px;
+    width: 100%;
   }
 
   .description {
- 
+    width: 100%;
+    max-height: none;
     margin-right: 0;
-    margin-bottom: 8px;
     font-size: 14px;
   }
 
-  .date {
-    width: 100%;
-    font-size: 12px;
-  }
+ 
 
-  .buttons {
-    width: 100%;
-    justify-content: space-between;
-    margin-left: 0;
-    margin-top: 10px;
+ 
+  .btn-delete{
+    margin-right: auto;
   }
 
   .btn-status {
